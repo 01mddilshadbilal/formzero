@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Loan Recovery Telecom | Job Application ₹499</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body {
+            background: linear-gradient(135deg, #62b3d6 0%, #2a4d9e 50%, #092827 100%);
+            min-height: 100vh;
+            padding: 1.5rem;
+        }
+        /* Glass effect card */
+        .glass-card {
+            background: linear-gradient(135deg, #42809b 0%, #193066 50%, #083e3c 100%);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.3);
+        }
+        .input-glass {
+            background: rgba(255, 255, 255, 0.9);
+            transition: all 0.2s;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .input-glass:focus {
+            background: white;
+            box-shadow: 0 0 0 3px rgba(249,115,22,0.4);
+            outline: none;
+        }
+        .required-star::after {
+            content: " *";
+            color: #f97316;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #f97316, #dc2626);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-primary:hover {
+            transform: scale(1.01);
+            box-shadow: 0 10px 20px -5px #f9731680;
+        }
+        .error-border {
+            border-color: #ef4444 !important;
+            background: #fee2e2;
+        }
+        .qr-card {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px dashed #f97316;
+        }
+    </style>
+</head>
+<body>
+
+<div class="max-w-4xl mx-auto">
+    <!-- Header -->
+    <div class="glass-card p-6 text-center mb-6">
+        <i class="fas fa-hand-holding-usd text-5xl text-orange-400 mb-2"></i>
+        <h1 class="text-3xl md:text-4xl font-bold text-white">Bank Loan Recovery Telecom</h1>
+        <p class="text-orange-200 text-lg">Employee Recruitment | <span class="font-bold">₹499 Registration Fee</span></p>
+        <div class="flex flex-wrap justify-center gap-3 mt-3">
+            <span class="bg-white/10 backdrop-blur px-4 py-1 rounded-full text-xs text-white"><i class="fas fa-bolt"></i> Immediate Hiring</span>
+            <span class="bg-white/10 backdrop-blur px-4 py-1 rounded-full text-xs text-white"><i class="fas fa-map-marker-alt"></i> Pan India</span>
+        </div>
+    </div>
+
+    <!-- Step 1: Form -->
+    <div id="step1" class="glass-card p-6 md:p-8 transition-all duration-300">
+        <div class="flex items-center gap-2 border-b border-white/20 pb-3 mb-5">
+            <i class="fas fa-edit text-orange-400 text-xl"></i>
+            <h2 class="text-2xl font-semibold text-white">Step 1: Fill Details</h2>
+        </div>
+        <form id="jobForm" enctype="multipart/form-data">
+            <div class="grid md:grid-cols-2 gap-5">
+                <div><label class="block text-white/90 font-medium required-star mb-1">Full Name</label><input type="text" id="fullName" name="full_name" required class="input-glass w-full p-3 rounded-xl"></div>
+                <div><label class="block text-white/90 font-medium required-star mb-1">Father's Name</label><input type="text" id="fatherName" name="father_name" required class="input-glass w-full p-3 rounded-xl"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-5 mt-4">
+                <div><label class="block text-white/90 font-medium required-star mb-1">Date of Birth</label><input type="date" id="dob" name="dob" required class="input-glass w-full p-3 rounded-xl"></div>
+                <div><label class="block text-white/90 font-medium required-star mb-1">Mobile Number</label><input type="tel" id="mobile" name="mobile" required class="input-glass w-full p-3 rounded-xl" placeholder="10 digits"></div>
+            </div>
+            <div class="mt-4"><label class="block text-white/90 font-medium required-star mb-1">Email Address</label><input type="email" id="email" name="email" required class="input-glass w-full p-3 rounded-xl"></div>
+            <div class="mt-4"><label class="block text-white/90 font-medium required-star mb-1">Full Address (with PIN)</label><textarea id="address" name="address" rows="2" required class="input-glass w-full p-3 rounded-xl"></textarea></div>
+            
+            <div class="grid md:grid-cols-2 gap-5 mt-4">
+                <div>
+                    <label class="block text-white/90 font-medium required-star mb-1">Highest Qualification</label>
+                    <select id="qualification" name="qualification" required class="input-glass w-full p-3 rounded-xl">
+                        <option value="">-- Select --</option>
+                        <option>10th Pass</option><option>12th Pass</option><option>Graduate</option>
+                        <option>Post Graduate</option><option>Diploma</option><option value="other">Other (Specify)</option>
+                    </select>
+                    <div id="otherDiv" class="hidden mt-2"><input type="text" id="otherQual" name="other_qualification" class="input-glass w-full p-3 rounded-xl" placeholder="Specify"></div>
+                </div>
+                <div>
+                    <label class="block text-white/90 font-medium required-star mb-1">Experience (Recovery/Telecom)</label>
+                    <select id="experience" name="experience" required class="input-glass w-full p-3 rounded-xl">
+                        <option value="">-- Select --</option>
+                        <option>No Experience</option><option>Less than 1 year</option><option>1-3 years</option>
+                        <option>3-5 years</option><option>5+ years</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- QR Payment Section -->
+            <div class="qr-card rounded-2xl p-4 mt-5 flex flex-col md:flex-row items-center gap-5">
+                <div class="bg-white p-2 rounded-xl shadow">
+                    <!-- 🔻 QR image name is "QR" → upload QR.jpg or QR.png in same folder 🔻 -->
+                    <img src="GooglePay_QR.png" alt="UPI QR ₹499" class="w-32 h-32 object-contain">
+                </div>
+                <div class="flex-1 text-white">
+                    <p class="font-semibold"><i class="fab fa-google-pay"></i> Pay ₹499 via UPI</p>
+                    <p class="text-sm opacity-90">Scan QR code or pay to <span class="bg-black/30 px-2 py-0.5 rounded">mddilshadbilal@oksbi</span></p>
+                    <p class="text-xs text-orange-300 mt-1">* After payment, take screenshot and upload below</p>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <label class="block text-white/90 font-medium required-star mb-1">Payment Receipt (Screenshot)</label>
+                <input type="file" id="receipt" name="receipt" accept="image/*" required class="w-full p-2 bg-white/80 rounded-xl border border-orange-300">
+                <p class="text-xs text-white/60 mt-1">JPG/PNG – mandatory</p>
+            </div>
+
+            <div class="flex items-center gap-2 mt-4">
+                <input type="checkbox" id="declaration" required class="w-5 h-5 accent-orange-500">
+                <label class="text-white/90 text-sm">I confirm all information is correct and payment receipt is genuine <span class="text-orange-400">*</span></label>
+            </div>
+
+            <button type="button" id="previewBtn" class="btn-primary w-full py-3 rounded-xl text-white font-bold text-lg shadow-lg mt-5"><i class="fas fa-eye mr-2"></i> Preview & Confirm</button>
+            <div id="formError" class="text-red-300 text-sm text-center mt-2 hidden"></div>
+        </form>
+    </div>
+
+    <!-- Step 2: Review -->
+    <div id="step2" class="glass-card p-6 md:p-8 transition-all duration-300 mt-6 hidden">
+        <div class="flex items-center gap-2 border-b border-white/20 pb-3 mb-5">
+            <i class="fas fa-check-circle text-green-400 text-xl"></i>
+            <h2 class="text-2xl font-semibold text-white">Step 2: Verify & Submit</h2>
+        </div>
+        <div id="reviewContent" class="bg-black/30 rounded-xl p-4 text-white/90 space-y-2 text-sm mb-6"></div>
+        <div class="flex gap-4 flex-wrap">
+            <button id="editBtn" class="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-2 rounded-xl"><i class="fas fa-pen mr-1"></i> Edit</button>
+            <button id="finalSubmit" class="bg-green-600 hover:bg-green-700 text-white px-8 py-2 rounded-xl flex-1"><i class="fas fa-paper-plane mr-1"></i> Confirm Submit</button>
+        </div>
+        <div id="submitStatus" class="mt-4 text-center hidden"></div>
+    </div>
+
+    <div class="text-center text-white/40 text-xs mt-6">Powered by secure Cloudflare backend</div>
+</div>
+
+<script>
+    // ---------- Global DOM ----------
+    const step1 = document.getElementById('step1');
+    const step2 = document.getElementById('step2');
+    const previewBtn = document.getElementById('previewBtn');
+    const editBtn = document.getElementById('editBtn');
+    const finalSubmit = document.getElementById('finalSubmit');
+    const formError = document.getElementById('formError');
+
+    function showError(msg) { formError.innerText = msg; formError.classList.remove('hidden'); setTimeout(() => formError.classList.add('hidden'), 5000); }
+
+    // Preview: validate and show review
+    previewBtn.onclick = () => {
+        if (!document.getElementById('declaration').checked) { showError("Please accept declaration"); return; }
+        const receiptFile = document.getElementById('receipt').files[0];
+        if (!receiptFile) { showError("Payment receipt upload is mandatory"); return; }
+        
+        const fullName = document.getElementById('fullName').value.trim();
+        const father = document.getElementById('fatherName').value.trim();
+        const dob = document.getElementById('dob').value;
+        const mobile = document.getElementById('mobile').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const address = document.getElementById('address').value.trim();
+        const qual = document.getElementById('qualification').value;
+        const otherQual = document.getElementById('otherQual').value.trim();
+        const exp = document.getElementById('experience').value;
+
+        if (!fullName || !father || !dob || !mobile || !email || !address || !qual || !exp) { showError("All required fields must be filled"); return; }
+        if (!/^\d{10}$/.test(mobile)) { showError("Mobile must be 10 digits"); return; }
+        if (!email.includes('@') || !email.includes('.')) { showError("Valid email required"); return; }
+        if (qual === 'other' && !otherQual) { showError("Please specify other qualification"); return; }
+        const finalQual = qual === 'other' ? `Other: ${otherQual}` : qual;
+
+        window.tempData = { fullName, father, dob, mobile, email, address, qualification: finalQual, experience: exp, receiptFile };
+
+        document.getElementById('reviewContent').innerHTML = `
+            <p><i class="fas fa-user w-5"></i> <strong>Full Name:</strong> ${fullName}</p>
+            <p><i class="fas fa-father"></i> <strong>Father's Name:</strong> ${father}</p>
+            <p><i class="fas fa-calendar"></i> <strong>DOB:</strong> ${dob}</p>
+            <p><i class="fas fa-phone"></i> <strong>Mobile:</strong> ${mobile}</p>
+            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> ${email}</p>
+            <p><i class="fas fa-location-dot"></i> <strong>Address:</strong> ${address}</p>
+            <p><i class="fas fa-graduation-cap"></i> <strong>Qualification:</strong> ${finalQual}</p>
+            <p><i class="fas fa-briefcase"></i> <strong>Experience:</strong> ${exp}</p>
+            <p><i class="fas fa-receipt"></i> <strong>Receipt:</strong> ${receiptFile.name}</p>
+            <hr class="my-2 border-white/20"><p class="text-green-300">✅ All correct? Confirm to submit.</p>
+        `;
+        step1.classList.add('hidden');
+        step2.classList.remove('hidden');
+    };
+
+    editBtn.onclick = () => {
+        step2.classList.add('hidden');
+        step1.classList.remove('hidden');
+    };
+
+    // ---------- 🔻 SET YOUR FORMZERO ENDPOINT URL HERE 🔻 ----------
+    const FORMZERO_URL = 'https://formzero.YOUR_SUBDOMAIN.workers.dev';   // <-- CHANGE THIS
+    // -----------------------------------------------------------------
+
+    finalSubmit.onclick = async () => {
+        const data = window.tempData;
+        if (!data) return;
+        const statusDiv = document.getElementById('submitStatus');
+        statusDiv.classList.remove('hidden');
+        finalSubmit.disabled = true;
+        finalSubmit.innerText = 'Submitting...';
+
+        const form = document.getElementById('jobForm');
+        const formData = new FormData(form);
+        // Ensure values are correct
+        formData.set('full_name', data.fullName);
+        formData.set('father_name', data.father);
+        formData.set('dob', data.dob);
+        formData.set('mobile', data.mobile);
+        formData.set('email', data.email);
+        formData.set('address', data.address);
+        formData.set('qualification', data.qualification);
+        formData.set('experience', data.experience);
+        if (data.receiptFile) formData.set('receipt', data.receiptFile);
+
+        try {
+            const res = await fetch(FORMZERO_URL, { method: 'POST', body: formData });
+            if (res.ok) {
+                statusDiv.innerHTML = '<span class="bg-green-800 text-green-100 px-4 py-2 rounded-full text-sm"><i class="fas fa-check-circle"></i> Success! Data saved to your database.</span>';
+                setTimeout(() => {
+                    form.reset();
+                    document.getElementById('otherDiv').classList.add('hidden');
+                    document.getElementById('qualification').value = '';
+                    document.getElementById('receipt').value = '';
+                    document.getElementById('declaration').checked = false;
+                    step2.classList.add('hidden');
+                    step1.classList.remove('hidden');
+                    statusDiv.classList.add('hidden');
+                    finalSubmit.disabled = false;
+                    finalSubmit.innerText = 'Confirm Submit';
+                }, 4000);
+            } else throw new Error('Server error');
+        } catch (err) {
+            statusDiv.innerHTML = '<span class="bg-red-800 text-red-100 px-4 py-2 rounded-full text-sm"><i class="fas fa-exclamation-triangle"></i> Submission failed. Check endpoint URL.</span>';
+            finalSubmit.disabled = false;
+            finalSubmit.innerText = 'Confirm Submit';
+        }
+    };
+
+    // Others
+    const qualSel = document.getElementById('qualification');
+    const otherDiv = document.getElementById('otherDiv');
+    qualSel.addEventListener('change', () => otherDiv.classList.toggle('hidden', qualSel.value !== 'other'));
+    document.getElementById('mobile').addEventListener('input', function(e) { this.value = this.value.replace(/\D/g, '').slice(0,10); });
+</script>
+</body>
+</html>
